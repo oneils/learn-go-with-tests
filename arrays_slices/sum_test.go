@@ -27,4 +27,13 @@ func TestSum(t *testing.T) {
 		}
 
 	})
+
+	t.Run("sum all tails", func(t *testing.T) {
+		got := SumAllTails([]int{1, 2}, []int{0, 9})
+		want := []int{2, 9}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("got %v want %v", got, want)
+		}
+	})
 }
