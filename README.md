@@ -18,3 +18,17 @@ Run
 ```go
 go test -cover
 ```
+
+## Using Mutex or Channels
+
+A `Mutex` is a mutual exclusion lock. The zero value for a Mutex is an unlocked mutex.
+`sync.WaitGroup` which is a convenient way of synchronising concurrent processes
+
+- Use channels when passing ownership of data 
+- Use mutexes for managing state
+
+## go vet
+
+go vet
+
+Remember to use `go vet` in your build scripts as it can alert you to some subtle bugs in your code before they hit your poor users.
