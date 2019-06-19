@@ -46,7 +46,7 @@ func TestRacer(t *testing.T) {
 
 func makeDelayedServer(delay time.Duration) *httptest.Server {
 	return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		time.Sleep(delay * time.Millisecond)
+		time.Sleep(delay)
 		w.WriteHeader(http.StatusOK)
 	}))
 }
